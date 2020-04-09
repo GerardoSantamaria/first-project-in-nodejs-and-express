@@ -1,18 +1,17 @@
-function info(text) {
-    console.log("INFO:", text);
+const info = (text) => {
+    console.log('INFO:', text);
     return text;
-}
+};
 
-//Dos formas de exportacion parcial
-//1
-module.exports.error = function error(text) {
-    console.log("ERROR:", text);
+const error = (text) => {
+    console.log('ERROR:', text);
     return text;
-}
+};
 
-//2
-module.exports.info = info;
+module.exports = info;
+module.exports = error;
 
-//exportar funciones
-//Exportacion global
-//module.exports = { info, error };
+
+// exportar funciones
+// Exportacion global
+// module.exports = { info, error };
